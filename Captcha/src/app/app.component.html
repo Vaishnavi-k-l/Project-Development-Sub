@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+</head>
+
+<body>
+    <form action="?" method="POST">
+        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+        <br/>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="g-recaptcha" data-type="image" data-sitekey="6Ldb48MUAAAAAHEE6wlE0y4NDRBD8wYslXcasl6a"></div>
+    <re-captcha (resolved)="resolved($event)" siteKey="6Ldb48MUAAAAAHEE6wlE0y4NDRBD8wYslXcasl6a">
+    </re-captcha>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    var onloadCallback = function() {
+        alert("grecaptcha is ready!");
+    };
+</script>
